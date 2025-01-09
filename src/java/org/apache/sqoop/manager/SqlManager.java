@@ -105,7 +105,7 @@ public abstract class SqlManager
    */
   protected String getColNamesQuery(String tableName) {
     // adding where clause to prevent loading a big table
-    return "SELECT t.* FROM " + escapeTableName(tableName) + " AS t WHERE 1=0";
+    return "SELECT * FROM " + escapeTableName(tableName) + "WHERE 1=0";
   }
 
   @Override
