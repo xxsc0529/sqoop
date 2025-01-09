@@ -8,8 +8,14 @@
 name: Gradle Package
 
 on:
-  release:
-    types: [created]
+  pull_request:
+    paths-ignore:
+      - "docs/**"
+      - "**.md"
+      - ".*"
+  push:
+    branches:
+      - trunk
 
 jobs:
   build:
